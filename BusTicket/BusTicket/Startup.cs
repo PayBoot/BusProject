@@ -2,10 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DataLibrary;
+using DataLibrary.Interface;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ServicesLibrary;
 
 namespace BusTicket
 {
@@ -22,6 +26,13 @@ namespace BusTicket
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
+            services.AddSingleton(Configuration);
+            services.AddScoped<IUser, UserServices>();
+
+            services.AddDbContext<DataContext>(options => options
+            .UseSqlServer(Configuration.GetConnectionString("DBConectionString")));
+             
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

@@ -1,6 +1,5 @@
 ﻿using DataLibrary.Models;
 using Microsoft.EntityFrameworkCore;
-using System;
 
 namespace DataLibrary
 {
@@ -19,8 +18,15 @@ namespace DataLibrary
         //Level 2 database: the CRUD operations are dependend on Level 1 database
         public DbSet<TbBus> TableBus { get; set; }
         public DbSet<TbSeat> TableSeat { get; set; }
+        public DbSet<TbEmployee> TableEmployee { get; set; }
+        public DbSet<TbRoute> TableRoute { get; set; }
+        public DbSet<TbTrip> TableTrip { get; set; }
+        public DbSet<TbPrice> TablePrice { get; set; }
+        public DbSet<TbReservation> TableReservation { get; set; }
+        public DbSet<TbPassenger> TablePassenger { get; set; }
+        public DbSet<TbTripAttendant> TableTripAttendant { get; set; }
 
-
-
+        //Not Important
+        public DbSet<TbUserLog> TableUserLog { get; set; }
     }
 }
