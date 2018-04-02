@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DataLibrary.Models
@@ -15,16 +16,16 @@ namespace DataLibrary.Models
 
         [DataType(DataType.DateTime)]
         [Required]
-        public string DepartureTime { get; set; }
+        public DateTime DepartureTime { get; set; }
 
         [DataType(DataType.DateTime)]
         [Required]
-        public string ArrivalTime { get; set; }
+        public DateTime ArrivalTime { get; set; }
 
         [DataType(DataType.Date)]
         [Required]
-        public string DateOfRecord { get; set; }
+        public DateTime DateOfRecord { get; set; }
 
-        public virtual IEnumerable<TbTripAttendant> TripAttendent { get; set; }
+        public IEnumerable<TbTripAttendant> TripAttendent { get; set; }
     }
 }

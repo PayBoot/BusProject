@@ -8,6 +8,7 @@ namespace DataLibrary.Interface
     {
         IEnumerable<TbUser> GetAll();
         void AddUser(TbUser NewUser);
+        TbUser GetById(int Id);
         void EditUser(TbUser CurUser);
         void DeleteUser(int id);
         TbUser LoginUser(string UserNameOrEmail, string Password);

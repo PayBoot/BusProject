@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataLibrary.Models
 {
@@ -17,7 +18,7 @@ namespace DataLibrary.Models
 
         [DataType(DataType.DateTime)]
         [Required]
-        public string DateOfRecord { get; set; }
+        public DateTime DateOfRecord { get; set; }
 
     }
 }

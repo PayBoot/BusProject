@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DataLibrary.Models
@@ -13,7 +14,7 @@ namespace DataLibrary.Models
 
         [DataType(DataType.Date)]
         [Required]
-        public string DateOfRecord { get; set; }
+        public DateTime DateOfRecord { get; set; }
 
         public virtual IEnumerable<TbTrip> Trip { get; set; }
     }

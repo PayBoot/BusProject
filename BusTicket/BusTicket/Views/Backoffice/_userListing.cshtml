@@ -1,0 +1,37 @@
+﻿@model BusTicket.Models.UserIndexModel;
+<table id="UserTable" class="table table-condensed">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>Username</th>
+            <th>Password</th>
+            <th>Email</th>
+            <th>Full name</th>
+            <th>User Type</th>
+            <th>Authorise</th>
+            <th>Status</th>
+            <th>Edit</th>
+            <th>Delete</th>
+
+        </tr>
+    </thead>
+    <tbody id="SetUserList">
+        <tr id="Loadingstatus"></tr>
+        @foreach (var i in Model.UserListing)
+        {
+            <tr>
+                <td>@i.Id</td>
+                <td>@i.Username</td>
+                <td>@i.Password</td>
+                <td>@i.Email</td>
+                <td>@i.Fullname</td>
+                <td>@i.UserType</td>
+                <td>@i.AuthoriseLevel</td>
+                <td>@i.Status</td>
+                <td><a class="btn btn-success" id="EditUserbyID" onclick="_editAccountView(@i.Id)" data-toggle="modal" data-target="#Mymodal">Edit</a></td>
+                <td><a class="btn btn-danger" id="DeleteUserbyID">Delete</a></td>
+            </tr>
+        }
+
+    </tbody>
+</table>

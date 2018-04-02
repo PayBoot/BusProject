@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
 namespace DataLibrary.Models
@@ -20,14 +21,14 @@ namespace DataLibrary.Models
         public TbPrice price { get; set; }
 
         [DataType(DataType.DateTime)]
-        public string CancelationTime { get; set; }
+        public DateTime CancelationTime { get; set; }
 
         [Required]
         public double AmountSeat { get; set; }
 
         [DataType(DataType.DateTime)]
         [Required]
-        public string ReservationTime { get; set; }
+        public DateTime ReservationTime { get; set; }
 
         public IEnumerable<TbPassenger> Passengers { get; set; }
 

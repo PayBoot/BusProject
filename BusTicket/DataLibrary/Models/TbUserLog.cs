@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataLibrary.Models
 {
@@ -7,8 +8,8 @@ namespace DataLibrary.Models
         public int Id { get; set; }
         public TbUser User { get; set; }
         [DataType(DataType.DateTime)]
-        public string Login { get; set; }
+        public DateTime Login { get; set; }
         [DataType(DataType.DateTime)]
-        public string Logout { get; set; }
+        public DateTime Logout { get; set; }
     }
 }

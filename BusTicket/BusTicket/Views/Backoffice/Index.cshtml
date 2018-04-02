@@ -1,0 +1,35 @@
+﻿@model BusTicket.Models.UserIndexModel;
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>User account</h2>
+<div class="form-group">
+    <a class="btn btn-default" data-toggle="modal" data-target="#Mymodal" onclick="_saveAccountView()">Add a new user</a>
+</div>
+<div class="form-group">
+    <a class="btn btn-default"  onclick="_userListing()">click</a>
+</div>
+<div id="UserListingDiv">
+    @Html.Partial("_userListing")
+   <h1>sdfdf</h1>
+</div>
+
+<div class="modal fade" id="Mymodal" role="dialog" tabindex="-1">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <a href="#" class="close" data-dismiss="modal">&times;</a>
+                <h4 id="Modaltitle"></h4>
+            </div>
+            <div class="modal-body">
+                <form id="Modalform" class="form-inline">
+                    <fieldset id="SubmitUserform">
+                       
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

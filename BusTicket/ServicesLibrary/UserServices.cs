@@ -95,5 +95,10 @@ namespace ServicesLibrary
             }
 
         }
+
+        public TbUser GetById(int Id)
+        {
+            return GetAll().FirstOrDefault(x => x.Id == Id);
+        }
     }
 }

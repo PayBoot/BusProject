@@ -1,7 +1,8 @@
 ﻿@{
     ViewData["Title"] = "Home Page";
 }
-<div>
+
+<div onload="Dosomething">
     <a class="btn btn-info" onclick="AddNewUser">Add User</a><br />
 
     <table class="table table-striped">
@@ -20,14 +21,14 @@
             </tr>
         </thead>
         <tbody id="SetUserListing">
-            <tr id="LoadingStatus">
-
-
-            </tr>
+            <tr id="LoadingStatus"></tr>
         </tbody>
     </table>
-    <script>
-        $("LoadingStatus").html("Loading...");
+    <div id="sss"></div>
 
-    </script>
 </div>
+<script>
+   
+
+
+</script>

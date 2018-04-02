@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-
-namespace BusTicket.Models
+﻿namespace BusTicket.Models
 {
     public class UserIndexListingModel
     {
@@ -18,16 +13,8 @@ namespace BusTicket.Models
 
         public string LastName { get; set; }
 
-        public string Fullname
-        {
-            get
-            {
-                return Fullname + " " + LastName;
-            }
-            set
-            {
-                Fullname = value;
-            }
+        public string Fullname {
+            get { return FirstName + " " + LastName; }
         }
         
         public string Email { get; set; }

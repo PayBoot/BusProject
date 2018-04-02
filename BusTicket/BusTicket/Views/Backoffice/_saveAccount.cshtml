@@ -1,0 +1,46 @@
+﻿@model BusTicket.Models.UserIndexListingModel;
+
+<label class="hidden"></label>
+<div class="form-group">
+    <label>First name</label>
+    <input asp-for="FirstName" type="text" class="form-control" style="width:200px" placeholder="Username" />
+</div><br style="margin-bottom:15px" />
+<div class="form-group">
+    <label>Last name</label>
+    <input asp-for="LastName" type="text" class="form-control" style="width:200px" />
+</div><br style="margin-bottom:15px" />
+<div class="form-group">
+    <label>Username</label>
+    <input asp-for="Username" type="text" class="form-control" style="width:200px" />
+</div><br style="margin-bottom:15px" />
+<div class="form-group">
+    <label>Password</label>
+    <input asp-for="Password" type="text" class="form-control" style="width:200px" />
+</div><br style="margin-bottom:15px" />
+<div class="form-group">
+    <label>Email address</label>
+    <input asp-for="Email" type="text" class="form-control" style="width:200px" />
+</div><br style="margin-bottom:15px" />
+<div class="form-group">
+    <label>User type</label>
+    <select asp-for="UserType" class="form-control">
+        <option>Admin</option>
+        <option>User</option>
+        <option>Agency</option>
+        <option>Customer</option>
+    </select>
+</div><br style="margin-bottom:15px" />
+<div class="form-group">
+    <label>Authority</label>
+    <input asp-for="AuthoriseLevel" type="text" class="form-control" style="width:200px" />
+</div><br style="margin-bottom:15px" />
+<div class="form-group">
+    <label>Status</label>
+    <select asp-for="Status" class="form-control">
+        <option>Enable</option>
+        <option>Disable</option>
+    </select>
+</div><br style="margin-bottom:15px" />
+<div class="form-group">
+    <a class="btn btn-success" id="saveAcc" onclick="_saveAccount()">Save</a>
+</div>

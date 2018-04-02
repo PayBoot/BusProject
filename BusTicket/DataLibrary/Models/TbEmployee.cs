@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using System;
+using System.ComponentModel.DataAnnotations;
 
 namespace DataLibrary.Models
 {
@@ -15,7 +16,7 @@ namespace DataLibrary.Models
         public string PhoneNumber { get; set; }
 
         [DataType(DataType.Date)]
-        public string DOB { get; set; }
+        public DateTime DOB { get; set; }
 
         [Required]
         public TbEmpStatus Status { get; set; }
