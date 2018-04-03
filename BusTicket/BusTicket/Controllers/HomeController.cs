@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using BusTicket.Models;
+using Microsoft.Azure;
 
 namespace BusTicket.Controllers
 {
@@ -13,6 +14,7 @@ namespace BusTicket.Controllers
         public IActionResult Index()
         {
             return View();
+            
         }
 
         public IActionResult About()

@@ -5,7 +5,7 @@ using DataLibrary;
 using DataLibrary.Interface;
 using DataLibrary.Models;
 using Microsoft.AspNetCore.Mvc;
-
+using Microsoft.Azure;
 
 
 // For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
